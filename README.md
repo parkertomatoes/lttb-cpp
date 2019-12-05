@@ -33,5 +33,4 @@ ExamplePoint in[500];
 GetYourInputsFromSomewhere(in);
 ExamplePoint out[50];
 PointLttb::Downsample(in, 500, out, 50);
-}
 ```
