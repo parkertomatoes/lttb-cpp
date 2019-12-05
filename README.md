@@ -15,7 +15,7 @@ struct ExamplePoint
     float y;
 };
 
-using PointLttb = LargestTriangleThreeBuckets<Example, float, &ExamplePoint::x, &ExamplePoint::y>
+using PointLttb = LargestTriangleThreeBuckets<ExamplePoint, float, &ExamplePoint::x, &ExamplePoint::y>
 ```
 
 Then use the static method ```Downsample``` in the class. It can be used with iterators
