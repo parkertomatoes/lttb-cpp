@@ -2,7 +2,7 @@
 
 This is a straightforward C++ port of the [reference implementation](https://github.com/sveinn-steinarsson/flot-downsample) of the Largest Triangle Three Buckets (LTTB) downsampling algorithm described in the paper ["Downsampling time series for visual representation" by Sveinn Steinarsson](http://hdl.handle.net/1946/15343). It is a single header, with a single class template that allows using different structures and data types.
 
-# How To Install
+## How To Install
 Simply add the ```lttb.hpp``` header to your project. There are no binaries to install, and no dependencies outside the standard library.
 
 ## How To Use
