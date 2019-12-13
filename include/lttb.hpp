@@ -1,3 +1,6 @@
+#ifndef __LTTP_HPP__
+#define __LTTP_HPP__
+
 #include <cstddef>
 #include <cmath>
 #include <algorithm>
@@ -72,3 +75,5 @@ struct LargestTriangleThreeBuckets
         ++destination;
     }
 };
+
+#endif
