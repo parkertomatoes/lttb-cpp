@@ -10,7 +10,7 @@ Create a typedef to specify your time series datapoint type
 ```c++
 #include "lttb.hpp"
 
-struct ExamplePoint
+struct ExamplePoint {
     float x;
     float y;
 };
@@ -22,9 +22,7 @@ Then use the static method ```Downsample``` in the class. It can be used with it
 ```c++
 std::vector<ExamplePoint> in = GetYourInputsFromSomewhere();
 std::vector<ExamplePoint> out;
-result.reserve(50);
-PointLttb::Downsample(in.begin(), in.size(), std::back_insert_iterator<std::vector<ExamplePoint>>(out), 50);
-return result;
+PointLttb::Downsample(in.begin(), in.size(), std::back_inserter(out), 50);
 ```
 
 ...or pointers:
