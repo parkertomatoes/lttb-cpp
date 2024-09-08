@@ -21,8 +21,6 @@ configure_file(
         "${CMAKE_CURRENT_SOURCE_DIR}/data/sample.csv"
         "${CMAKE_CURRENT_BINARY_DIR}/data/sample.csv"
         COPYONLY)
-    
-
 
 # Register tests
 include(doctest/scripts/cmake/doctest.cmake)
