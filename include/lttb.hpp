@@ -29,7 +29,8 @@ struct LargestTriangleThreeBuckets
         }
 
         // Bucket size. Leave room for start and end data points
-        TData every = static_cast<TData>(sourceSize - 2) / static_cast<TData>(destinationSize - 2);
+        // Note: We cast to double to avoid floored window propagation
+        double every = static_cast<double>(sourceSize - 2) / static_cast<double>(destinationSize - 2);
 
         size_t aIndex = 0; // Initially a is the first point in the triangle
 
@@ -74,7 +75,9 @@ struct LargestTriangleThreeBuckets
                 TData area = std::abs(
                     ((pointAX - avgX) * (source[rangeOffs].*y - pointAY)) -
                     ((pointAX - source[rangeOffs].*x) * (avgY - pointAY))
-                ) / 2;
+                );
+                // Note: Normally you need to also divide area by 2, but all we care about
+                // is the largest area, so we can skip the division by a constant factor of 2
                 if (area > maxArea) 
                 {
                     maxArea = area;
