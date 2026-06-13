@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project("lttb" VERSION 1.0.0
+project("lttb" VERSION 1.0.1
              DESCRIPTION "C++ implementation of the Largest Triangle Three Buckets (LTTB) downsampling algorithm"
              HOMEPAGE_URL "https://github.com/parkertomatoes/lttb-cpp")
 

@@ -5,6 +5,13 @@ This is a straightforward C++ port of the [reference implementation](https://git
 ## How To Install
 Simply add the ```lttb.hpp``` header to your project. There are no binaries to install, and no dependencies outside the standard library.
 
+The project also installs a CMake package:
+
+```cmake
+find_package(lttb CONFIG REQUIRED)
+target_link_libraries(your-target PRIVATE lttb::lttb)
+```
+
 ## How To Use
 Create a typedef to specify your time series datapoint type
 ```c++
